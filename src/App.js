@@ -12,7 +12,7 @@ function App() {
   const onClick = () => setShowing((prev) => !prev);
   return (
     <div>
-      {}
+      {showing ? <Hello/> : null}
       <button onClick={onClick}>{showing ? "HIDE" : "Show"}</button>
     </div>
   );
