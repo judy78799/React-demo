@@ -11,13 +11,13 @@ function App() {
  
   useEffect(() => {
     console.log("I run only once.");
-  }, []);
+  }, []); //아무런 것이 안들어가 있기 때문에 React가 지켜보는 요소가 존재하지 않음.
   useEffect(() => {
     console.log("I run when 'keyword' changes...");
-  }, [keyword]);
+  }, [keyword]);  //리액트가 keyword가 변경될 때마다 콘솔로그 실행.
   useEffect(() => {
     console.log("I run when 'counter' changes...");
-  }, [counter]);
+  }, [counter]);  //리액트가 counter가 변경될 때마다 콘솔로그 실행.
 
   return (
     <div>
