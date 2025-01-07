@@ -13,8 +13,10 @@ function App() {
     console.log("CALL THE API...");
   }, []);
   useEffect(() => {
-    console.log("SEARCH FOR" , keyword);
-  }, []);
+    if(keyword != "" && keyword.length > 5){
+      console.log("SEARCH FOR" , keyword);
+    }
+  }, [keyword]);
 
   return (
     <div>
