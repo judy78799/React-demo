@@ -18,7 +18,9 @@ function App() {
   useEffect(() => {
     console.log("I run when 'counter' changes...");
   }, [counter]);  //리액트가 counter가 변경될 때마다 콘솔로그 실행.
-
+  useEffect(() => {
+    console.log("I run when keyword & counter' changes...");
+  }, [keyword, counter]); 
   return (
     <div>
       <input 
