@@ -4,7 +4,17 @@ import styles from "./App.module.css";
 import {useEffect, useState} from "react";
 
 function Hello(){
-  return <h1>Hello</h1>
+  function byFn() {
+    console.log("bye :(");
+  }
+  function hiFn () {
+    console.log("created : )");
+    return byFn;
+  }
+  useEffect(() => {});
+  useEffect(function(){});
+  useEffect(hiFn, []);
+  return <h1>Hello</h1>;
 }
 
 function App() {
@@ -13,7 +23,7 @@ function App() {
   return (
     <div>
       {showing ? <Hello/> : null}
-      <button onClick={onClick}>{showing ? "HIDE" : "Show"}</button>
+      <button onClick={onClick}>{showing ? "HIDE" : "SHOW"}</button>
     </div>
   );
 }
